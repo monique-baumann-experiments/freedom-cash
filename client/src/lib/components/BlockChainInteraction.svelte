@@ -29,37 +29,12 @@
 </script>
 
 <button class="button" on:click={() => (investIntoFreedomCash = !investIntoFreedomCash)}
-	>Invest Into Freedom Cash</button
+	>Buy Freedom Cash</button
 >
 {#if investIntoFreedomCash}
 	<InvestIntoFreedomCash {contract} {publicWalletAddressOfVisitor} {provider}
 	></InvestIntoFreedomCash>
 {/if}
-<p><br /></p>
-
-<button on:click={() => (playInvestmentBets = !playInvestmentBets)}>Play Investment Bets</button>
-{#if playInvestmentBets}
-	<p><br /><br /></p>
-	<InvestmentBets {contract}></InvestmentBets>
-	<p><br /><br /></p>
-{/if}
-<p><br /></p>
-<button on:click={() => (playPublicGoodsFunding = !playPublicGoodsFunding)}
-	>Play Public Goods Funding</button
->
-{#if playPublicGoodsFunding}
-	<p><br /><br /></p>
-	<PublicGoodsFunding {contract}></PublicGoodsFunding>
-	<p><br /><br /></p>
-{/if}
-<p><br /></p>
-<button on:click={() => (playGeocashing = !playGeocashing)}>Play GeoCashing</button>
-{#if playGeocashing}
-	<p><br /><br /></p>
-	<GeoCashing {contract}></GeoCashing>
-	<p><br /><br /></p>
-{/if}
-
 <p><br /></p>
 
 <button class="button" on:click={() => (sellFreedomCash = !sellFreedomCash)}>Sell Freedom Cash</button>

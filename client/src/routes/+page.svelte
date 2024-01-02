@@ -2,7 +2,7 @@
 	import Seo from '$lib/components/Seo.svelte';
 	import { onMount } from 'svelte';
 	import { ethers } from 'ethers';
-	import { baseURLScan, smartContractAddress, freedomCashABI } from '../constants.ts';
+	import { baseURLScan, smartContractAddress, freedomCashABI, targetChainName } from '../constants.ts';
 	import BlockChainData from '../lib/components/BlockChainData.svelte';
 	import BlockChainInteraction from '$components/BlockChainInteraction.svelte';
 	import EducateYourself from '$components/EducateYourself.svelte';
@@ -65,7 +65,7 @@
 <main>
 	<h2 class="text-center">Freedom Cash</h2>
 	<section class="text-center">
-		Freedom Cash makes crypto cypherpunk again, while being simple enough.  
+		Freedom Cash makes crypto cypherpunk again, while being simple enough for everyone who cares.  
 		<p><br /></p>
 
 		<p><br /><br /></p>
@@ -153,7 +153,7 @@
 					connectToBlockchain();
 				}}
 			>
-				Connect To Ethereum Mainnet
+				Connect To {targetChainName}
 			</button>
 		{:else}
 			<h4 class="text-center">State of the Game</h4>

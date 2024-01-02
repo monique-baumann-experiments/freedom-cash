@@ -41,7 +41,7 @@ button:hover {
 	width: 100%;
 }
 .inside {
-	background-color: #003300;
+	background-color: rgb(1, 111, 1);
 }
 #sveltekit-entry {
 	min-height: 99.7vh;

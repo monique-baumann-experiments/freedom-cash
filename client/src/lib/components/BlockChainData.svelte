@@ -10,17 +10,9 @@
 	let amountOfCoinsInVisitorsWallet;
 	let amountOfCoinsInSmartContractItself;
 	let readyForDisplay = false;
-	let GeocashingCandidatesCounter = 0;
 	let buyPrice;
 	let sellPrice;
-	let investmentBudget;
-	let publicGoodsFundingBudget;
-	let geoCashingBudget;
-	let liquidityBudget;
 	let amountOfETHInSmartContract;
-	let addressOfHighestInvestmentBet;
-	let addressOfHighestPublicGoodFundingBet;
-	let addressOfHighestGeoCashBet;
 
 	onMount(async () => {
 		loadData();
@@ -30,54 +22,27 @@
 	});
 
 	async function loadData() {
-		// const sCBalance = await contract.balanceOf(smartContractAddress);
-		// amountOfCoinsInSmartContractItself = ethers.formatEther(sCBalance);
-		// const visitorBalance = await contract.balanceOf(publicWalletAddressOfVisitor);
-		// amountOfCoinsInVisitorsWallet = ethers.formatEther(visitorBalance);
-		// addressOfHighestInvestmentBet = await contract.getAddressOfHighestSoFar(
-		// 	ethers.encodeBytes32String('investmentBet')
-		// );
-		// addressOfHighestPublicGoodFundingBet = await contract.getAddressOfHighestSoFar(
-		// 	ethers.encodeBytes32String('publicGoodsFunding')
-		// );
-		// addressOfHighestGeoCashBet = await contract.getAddressOfHighestSoFar(
-		// 	ethers.encodeBytes32String('geoCashing')
-		// );
-		// GeocashingCandidatesCounter = await contract.gCCCounter();
-		// investmentBudget = ethers.formatUnits((await contract.investmentBudget()).toString(), 'ether');
-		// publicGoodsFundingBudget = ethers.formatUnits(
-		// 	(await contract.publicGoodsFundingBudget()).toString(),
-		// 	'ether'
-		// );
-		// geoCashingBudget = ethers.formatUnits((await contract.geoCashingBudget()).toString(), 'ether');
-		// liquidityBudget = ethers.formatUnits((await contract.liquidityBudget()).toString(), 'ether');
-		// const rawBuyPrice = await contract.getBuyPrice(ethers.parseUnits('1', 'ether'));
-		// buyPrice = ethers.formatUnits(rawBuyPrice.toString(), 'ether');
-		// try {
-		// 	sellPrice = ethers.formatUnits((await contract.getSellPrice()).toString(), 'ether');
-		// } catch (error) {
-		// 	console.log(error.message);
-		// }
+		const sCBalance = await contract.balanceOf(smartContractAddress);
+		amountOfCoinsInSmartContractItself = ethers.formatEther(sCBalance);
+		const visitorBalance = await contract.balanceOf(publicWalletAddressOfVisitor);
+		amountOfCoinsInVisitorsWallet = ethers.formatEther(visitorBalance);
+		const rawBuyPrice = await contract.getBuyPrice(ethers.parseUnits('1', 'ether'));
+		buyPrice = ethers.formatUnits(rawBuyPrice.toString(), 'ether');
+		try {
+			sellPrice = ethers.formatUnits((await contract.getSellPrice()).toString(), 'ether');
+		} catch (error) {
+			console.log(error.message);
+		}
 
-		// amountOfETHInSmartContract = ethers.formatUnits(
-		// 	(await provider.getBalance(smartContractAddress)).toString(),
-		// 	'ether'
-		// );
+		amountOfETHInSmartContract = ethers.formatUnits(
+			(await provider.getBalance(smartContractAddress)).toString(),
+			'ether'
+		);
 		readyForDisplay = true;
 	}
 </script>
 
 {#if readyForDisplay}
-	{#if investmentBudget > 0.099}
-		There is enough Investmentbudget for the next community investment. <p><br /></p>
-		To save gas fees for voters we let volunteers execute the community investment which means especially
-		paying the gas fees to swap ETH from the accumulated investmentBudget within the smart contract to
-		the
-		<a href="{baseURLScan}{addressOfHighestInvestmentBet}" target="_blank">current winning coin</a>
-		for this round.
-		<ExecuteCommunityInvestment {contract} {investmentBudget}></ExecuteCommunityInvestment>
-		<p><br /></p>
-	{/if}
 	<table>
 		<tr>
 			<th>Key</th>
@@ -116,22 +81,6 @@
 		<tr>
 			<td>Guaranteed Minimum Sell Price</td>
 			<td>{sellPrice} Ether</td>
-		</tr>
-		<tr>
-			<td>Investment Bets Budget</td>
-			<td>{investmentBudget} Ether</td>
-		</tr>
-		<tr>
-			<td>Public Goods Funding Budget</td>
-			<td>{publicGoodsFundingBudget} Ether</td>
-		</tr>
-		<tr>
-			<td>GeoCash Budget</td>
-			<td>{geoCashingBudget} Ether</td>
-		</tr>
-		<tr>
-			<td>ETH Liquidity Budget</td>
-			<td>{liquidityBudget} Ether</td>
 		</tr>
 		<tr>
 			<td>ETH Overall Budget</td>

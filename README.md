@@ -28,7 +28,7 @@ while (repeatXMoreTimes > 0) {
 }
 ```
 
-## Execute Usage Example
+## Execute Usage Example Bollinger
 
 ```sh
 deno run --allow-read --allow-write https://deno.land/x/freedom_cash/usage-example.ts
@@ -52,7 +52,7 @@ Please study the [smart contract](https://github.com/monique-baumann/freedom-cas
 
 ## Usage Example Client
 There shall be many trustworthy frontends for Freedom Cash.  
-Programmers will be able to integrate Freedom Cash as svelte, angular or vue component starting in March 12th.
+Programmers will be able to integrate Freedom Cash as svelte, angular or vue component starting on March 12th.
 
 ## Donations
 Thanks to [Freedom Cash](https://FreedomCash.org), we are already free.  
