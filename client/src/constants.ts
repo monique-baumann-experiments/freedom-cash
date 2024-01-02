@@ -1,5 +1,5 @@
 
-export const smartContractAddress = '0x67450842119Dcb093102A950590e494d679AA714';
+export const smartContractAddress = '0xa1e7bB978a28A30B34995c57d5ba0B778E90033B';
 
 export const targetChainName = 'Polygon ZKEVM';
 
