@@ -30,10 +30,27 @@ while (repeatXMoreTimes > 0) {
 
 ## Execute Usage Example
 
-```ts
+```sh
 deno run --allow-read --allow-write https://deno.land/x/freedom_cash/usage-example.ts
-
 ```
+
+## Q&A 
+<b>Why don't you create liquidity as an ETH/FreedomCash Tradingpair on Uniswap?</b>  
+  
+With our approach we reduce gas fees and avoid exchange fees for Freedom Cash investors.
+Our pricing approach protects against ponzi like vulnerabilities & drops of the sell price guaranteed by the [smart contract](https://github.com/monique-baumann/freedom-cash/blob/main/blockchain/freedom-cash.sol).
+
+
+<b>What happens if anyone creates a liquidity pool for Freedom Cash on Uniswap?</b>  
+  
+People are free to create liquidity pools e.g. with ETH/FreedomCash liquidity on Uniswap. It is just not necessary and not useful.
+
+<b>How is it possible that the sell price never drops?</b>  
+  
+The sell price of Freedom Cash expressed in Ether can stay as it is or go up. It can never drop.
+Please study the [smart contract](https://github.com/monique-baumann/freedom-cash/blob/main/blockchain/freedom-cash.sol) and focus on the [getSellPrice](https://github.com/monique-baumann/freedom-cash/blob/main/blockchain/freedom-cash.sol#L52-L58) function.  
+
+
 ## Donations
 Thanks to [Freedom Cash](https://FreedomCash.org), we are already free.  
 If you want to donate, you might consider donating to the [otherparty.co.uk](https://www.otherparty.co.uk/donate-crypto-the-other-party) to ensure people do not need to donate to victims but rather donate successfully to problem solvers.   

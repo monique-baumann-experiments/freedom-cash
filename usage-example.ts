@@ -1,5 +1,5 @@
-import { Bollinger } from "./mod.ts";
-import { sleep } from "./deps.ts";
+import { Bollinger } from "https://deno.land/x/freedom_cash/mod.ts";
+import { sleep } from "https://deno.land/x/sleep/mod.ts";
 
 const bollinger = await Bollinger.getInstance()
 
