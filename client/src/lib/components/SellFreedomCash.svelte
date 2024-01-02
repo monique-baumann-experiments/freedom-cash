@@ -13,7 +13,6 @@ s<script>
 		try {
 			sellPrice = await contract.getSellPrice(); // to be up to date
 			let result = await contract.sellFreedomCash(amount.toString(), sellPrice.toString());
-			// let result = await contract.sellFreedomCash("13817147682402620449645", "48531453097535");
 			console.log(`result: ${result}`);
 		} catch (error) {
 			alert(error.message);

@@ -8,7 +8,7 @@
 	export let provider;
 
 	let amountOfCoinsInVisitorsWallet;
-	let amountOfCoinsInSmartContractItself;
+	// let amountOfCoinsInSmartContractItself;
 	let readyForDisplay = false;
 	let buyPrice;
 	let sellPrice;
@@ -23,7 +23,7 @@
 
 	async function loadData() {
 		const sCBalance = await contract.balanceOf(smartContractAddress);
-		amountOfCoinsInSmartContractItself = ethers.formatEther(sCBalance);
+		// amountOfCoinsInSmartContractItself = ethers.formatEther(sCBalance);
 		const visitorBalance = await contract.balanceOf(publicWalletAddressOfVisitor);
 		amountOfCoinsInVisitorsWallet = ethers.formatEther(visitorBalance);
 		const rawBuyPrice = await contract.getBuyPrice(ethers.parseUnits('1', 'ether'));
@@ -60,20 +60,20 @@
 			>
 		</tr>
 
-		<tr>
+		<!-- <tr>
 			<td>Smart Contract Balance</td>
 			<td
-				>{amountOfCoinsInSmartContractItself}
+				>{Math.round(Number(amountOfCoinsInSmartContractItself) + Number.EPSILON * 10**15 / 10**15)}
 				<a href="{baseURLScan}{smartContractAddress}" target="_blank">Freedom Cash</a></td
 			>
 		</tr>
 		<tr>
 			<td>Underway</td>
 			<td
-				>{369369369 - amountOfCoinsInSmartContractItself}
+				>{Math.round((369369369 - amountOfCoinsInSmartContractItself + Number.EPSILON) * 10**15) / 10**15}
 				<a href="{baseURLScan}{smartContractAddress}" target="_blank">Freedom Cash</a></td
 			>
-		</tr>
+		</tr> -->
 		<tr>
 			<td>Buy Price</td>
 			<td>{buyPrice} Ether</td>
@@ -83,14 +83,13 @@
 			<td>{sellPrice} Ether</td>
 		</tr>
 		<tr>
-			<td>ETH Overall Budget</td>
+			<td>Market Capitalization (according to contract)</td>
 			<td>{amountOfETHInSmartContract} Ether</td>
-		</tr>		
+		</tr>
 		<tr>
 			<td>Smart Contract Address</td>
 			<td class="longInfo"
-				><a href="{baseURLScan}{smartContractAddress}" target="_blank"
-					>{smartContractAddress}</a
+				><a href="{baseURLScan}{smartContractAddress}" target="_blank">{smartContractAddress}</a
 				></td
 			>
 		</tr>
