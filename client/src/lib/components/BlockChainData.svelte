@@ -30,39 +30,39 @@
 	});
 
 	async function loadData() {
-		const sCBalance = await contract.balanceOf(smartContractAddress);
-		amountOfCoinsInSmartContractItself = ethers.formatEther(sCBalance);
-		const visitorBalance = await contract.balanceOf(publicWalletAddressOfVisitor);
-		amountOfCoinsInVisitorsWallet = ethers.formatEther(visitorBalance);
-		addressOfHighestInvestmentBet = await contract.getAddressOfHighestSoFar(
-			ethers.encodeBytes32String('investmentBet')
-		);
-		addressOfHighestPublicGoodFundingBet = await contract.getAddressOfHighestSoFar(
-			ethers.encodeBytes32String('publicGoodsFunding')
-		);
-		addressOfHighestGeoCashBet = await contract.getAddressOfHighestSoFar(
-			ethers.encodeBytes32String('geoCashing')
-		);
-		GeocashingCandidatesCounter = await contract.gCCCounter();
-		investmentBudget = ethers.formatUnits((await contract.investmentBudget()).toString(), 'ether');
-		publicGoodsFundingBudget = ethers.formatUnits(
-			(await contract.publicGoodsFundingBudget()).toString(),
-			'ether'
-		);
-		geoCashingBudget = ethers.formatUnits((await contract.geoCashingBudget()).toString(), 'ether');
-		liquidityBudget = ethers.formatUnits((await contract.liquidityBudget()).toString(), 'ether');
-		const rawBuyPrice = await contract.getBuyPrice(ethers.parseUnits('1', 'ether'));
-		buyPrice = ethers.formatUnits(rawBuyPrice.toString(), 'ether');
-		try {
-			sellPrice = ethers.formatUnits((await contract.getSellPrice()).toString(), 'ether');
-		} catch (error) {
-			console.log(error.message);
-		}
+		// const sCBalance = await contract.balanceOf(smartContractAddress);
+		// amountOfCoinsInSmartContractItself = ethers.formatEther(sCBalance);
+		// const visitorBalance = await contract.balanceOf(publicWalletAddressOfVisitor);
+		// amountOfCoinsInVisitorsWallet = ethers.formatEther(visitorBalance);
+		// addressOfHighestInvestmentBet = await contract.getAddressOfHighestSoFar(
+		// 	ethers.encodeBytes32String('investmentBet')
+		// );
+		// addressOfHighestPublicGoodFundingBet = await contract.getAddressOfHighestSoFar(
+		// 	ethers.encodeBytes32String('publicGoodsFunding')
+		// );
+		// addressOfHighestGeoCashBet = await contract.getAddressOfHighestSoFar(
+		// 	ethers.encodeBytes32String('geoCashing')
+		// );
+		// GeocashingCandidatesCounter = await contract.gCCCounter();
+		// investmentBudget = ethers.formatUnits((await contract.investmentBudget()).toString(), 'ether');
+		// publicGoodsFundingBudget = ethers.formatUnits(
+		// 	(await contract.publicGoodsFundingBudget()).toString(),
+		// 	'ether'
+		// );
+		// geoCashingBudget = ethers.formatUnits((await contract.geoCashingBudget()).toString(), 'ether');
+		// liquidityBudget = ethers.formatUnits((await contract.liquidityBudget()).toString(), 'ether');
+		// const rawBuyPrice = await contract.getBuyPrice(ethers.parseUnits('1', 'ether'));
+		// buyPrice = ethers.formatUnits(rawBuyPrice.toString(), 'ether');
+		// try {
+		// 	sellPrice = ethers.formatUnits((await contract.getSellPrice()).toString(), 'ether');
+		// } catch (error) {
+		// 	console.log(error.message);
+		// }
 
-		amountOfETHInSmartContract = ethers.formatUnits(
-			(await provider.getBalance(smartContractAddress)).toString(),
-			'ether'
-		);
+		// amountOfETHInSmartContract = ethers.formatUnits(
+		// 	(await provider.getBalance(smartContractAddress)).toString(),
+		// 	'ether'
+		// );
 		readyForDisplay = true;
 	}
 </script>
