@@ -1,5 +1,5 @@
 # Freedom Cash
-🦕 module to stabilize the buy price and increase the sell price of [Freedom Cash](https://FreedomCash.org).
+🦕 [module](https://deno.land/x/freedom_cash) to stabilize the buy price and increase the sell price of [Freedom Cash](https://FreedomCash.org).
 
 ## Utility
 Support peer to peer collaboration while preventing pump and dump frauds.  
