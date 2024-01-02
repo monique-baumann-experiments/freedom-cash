@@ -17,7 +17,7 @@
 	<p><br /></p>
 
 	I buy and sell
-	<a href="{baseURLScan}{smartContractAddress}" target="_blank">Freedom Cash</a>.
+	<a href="{baseURLScan}token/{smartContractAddress}" target="_blank">Freedom Cash</a>.
 	<i>Monique Baumann</i>
 	<p><br /></p>
 </div>
@@ -28,4 +28,3 @@
 		border-radius: 9%;
 	}
 </style>
-

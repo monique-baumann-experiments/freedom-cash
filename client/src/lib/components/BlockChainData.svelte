@@ -56,7 +56,7 @@
 			<td>Wallet Balance</td>
 			<td
 				>{amountOfCoinsInVisitorsWallet}
-				<a href="{baseURLScan}{smartContractAddress}" target="_blank">Freedom Cash</a></td
+				<a href="{baseURLScan}token/{smartContractAddress}" target="_blank">Freedom Cash</a></td
 			>
 		</tr>
 
@@ -64,14 +64,14 @@
 			<td>Smart Contract Balance</td>
 			<td
 				>{Math.round(Number(amountOfCoinsInSmartContractItself) + Number.EPSILON * 10**15 / 10**15)}
-				<a href="{baseURLScan}{smartContractAddress}" target="_blank">Freedom Cash</a></td
+				<a href="{baseURLScan}token/{smartContractAddress}" target="_blank">Freedom Cash</a></td
 			>
 		</tr>
 		<tr>
 			<td>Underway</td>
 			<td
 				>{Math.round((369369369 - amountOfCoinsInSmartContractItself + Number.EPSILON) * 10**15) / 10**15}
-				<a href="{baseURLScan}{smartContractAddress}" target="_blank">Freedom Cash</a></td
+				<a href="{baseURLScan}token/{smartContractAddress}" target="_blank">Freedom Cash</a></td
 			>
 		</tr> -->
 		<tr>
@@ -89,7 +89,8 @@
 		<tr>
 			<td>Smart Contract Address</td>
 			<td class="longInfo"
-				><a href="{baseURLScan}{smartContractAddress}" target="_blank">{smartContractAddress}</a
+				><a href="{baseURLScan}token/{smartContractAddress}" target="_blank"
+					>{smartContractAddress}</a
 				></td
 			>
 		</tr>

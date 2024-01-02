@@ -1,6 +1,6 @@
 <script>
-import Seo from '$lib/components/Seo.svelte';
-import { baseURLScan, smartContractAddress } from '../../constants.ts';
+	import Seo from '$lib/components/Seo.svelte';
+	import { baseURLScan, smartContractAddress } from '../../constants.ts';
 </script>
 
 <Seo title="Freedom Enterprise" />
@@ -8,8 +8,8 @@ import { baseURLScan, smartContractAddress } from '../../constants.ts';
 <div class="text-center">
 	<h2>Freedom Enterprise</h2>
 
-	Will be released on March 2024. 
-	
+	Will be released on March 2024.
+
 	<p><br /><br /></p>
 	<div class="center">
 		<img class="moniqueImage" src="/monique-baumann.jpeg" alt="" />
@@ -17,7 +17,7 @@ import { baseURLScan, smartContractAddress } from '../../constants.ts';
 	<p><br /></p>
 
 	I buy and sell
-	<a href="{baseURLScan}{smartContractAddress}" target="_blank">Freedom Cash</a>.
+	<a href="{baseURLScan}token/{smartContractAddress}" target="_blank">Freedom Cash</a>.
 	<i>Monique Baumann</i>
 	<p><br /></p>
 </div>
@@ -28,4 +28,3 @@ import { baseURLScan, smartContractAddress } from '../../constants.ts';
 		border-radius: 9%;
 	}
 </style>
-

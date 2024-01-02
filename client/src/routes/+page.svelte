@@ -60,7 +60,7 @@
 
 			visitorIsConnectedViaBrowserWallet = true;
 		}
-		window.ethereum.on('accountsChanged', function (accounts) {	
+		window.ethereum.on('accountsChanged', function (accounts) {
 			alert(`the account has been changed via Metamask. So I reload.`);
 			window.location.reload();
 		});
@@ -72,10 +72,7 @@
 	}
 </script>
 
-<Seo
-	title="Home"
-	description="Freedom Cash is the currency for the Freedom Enterprise."
-/>
+<Seo title="Home" description="Freedom Cash is the currency for the Freedom Enterprise." />
 
 <main>
 	<h2 class="text-center">Freedom Cash</h2>
@@ -90,19 +87,21 @@
 		<p><br /></p>
 
 		I buy and sell
-		<a href="{baseURLScan}{smartContractAddress}" target="_blank">Freedom Cash</a>.
+		<a href="{baseURLScan}token/{smartContractAddress}" target="_blank">Freedom Cash</a>.
 		<i>Monique Baumann</i>
 		<p><br /></p>
 
 		<h4 class="text-center">Total Supply</h4>
 		369.369.369
-		<a href="{baseURLScan}{smartContractAddress}" target="_blank">Freedom Cash (FREEDOMCASH)</a>
+		<a href="{baseURLScan}token/{smartContractAddress}" target="_blank"
+			>Freedom Cash (FREEDOMCASH)</a
+		>
 		<h4 class="text-center">Utility</h4>
 		Funding playgrounds for freedom.
 
 		<h4 class="text-center">Liquidity</h4>
 		The total supply of Freedom Cash was minted not to the developer or deployer but to the
-		<a href="{baseURLScan}{smartContractAddress}" target="_blank"> smart contract</a>
+		<a href="{baseURLScan}token/{smartContractAddress}" target="_blank"> smart contract</a>
 		itself.
 
 		<EducateYourself></EducateYourself>
@@ -119,7 +118,7 @@
 		</h6>
 		<p><br /></p>
 		With our approach we reduce gas fees and avoid pool fees for
-		<a href="{baseURLScan}{smartContractAddress}" target="_blank">Freedom Cash</a>
+		<a href="{baseURLScan}token/{smartContractAddress}" target="_blank">Freedom Cash</a>
 		investors.
 		<p><br /></p>
 		Additionally our pricing approach protects against ponzi like vulnerabilities & drops of the sell
@@ -138,7 +137,7 @@
 		<EducateYourself></EducateYourself>
 		<p><br /></p>
 
-		<a href="{baseURLScan}{smartContractAddress}" target="_blank">
+		<a href="{baseURLScan}token/{smartContractAddress}" target="_blank">
 			<div class="center">
 				<img class="tokenomicsImage" src="/price-functions.png" alt="" />
 			</div>

@@ -5,7 +5,6 @@
 	export let publicWalletAddressOfVisitor;
 	let amountToBeBought = 1;
 	async function buyFreedomCash() {
-		alert(amountToBeBought);
 		const amountToBeBoughtInWei = ethers.parseEther(amountToBeBought.toString());
 		const buyPrice = Number(await contract.getBuyPrice(amountToBeBoughtInWei));
 		const cost = amountToBeBought * buyPrice;

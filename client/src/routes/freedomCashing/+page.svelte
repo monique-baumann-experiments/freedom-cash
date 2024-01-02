@@ -5,8 +5,8 @@
 <div class="text-center">
 	<h2>Freedom Cashing</h2>
 
-	Geocashing for freedom. 
-	<p><br></p>
+	Geocashing for freedom.
+	<p><br /></p>
 	Will be released on March 2024.
 
 	<p><br /><br /></p>
@@ -16,7 +16,7 @@
 	<p><br /></p>
 
 	I buy and sell
-	<a href="{baseURLScan}{smartContractAddress}" target="_blank">Freedom Cash</a>.
+	<a href="{baseURLScan}token/{smartContractAddress}" target="_blank">Freedom Cash</a>.
 	<i>Monique Baumann</i>
 	<p><br /></p>
 </div>
