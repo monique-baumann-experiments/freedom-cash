@@ -28,6 +28,12 @@ while (repeatXMoreTimes > 0) {
 }
 ```
 
+## Execute Usage Example
+
+```ts
+deno run --allow-read --allow-write https://deno.land/x/freedom_cash/usage-example.ts
+
+```
 ## Donations
 Thanks to [Freedom Cash](https://FreedomCash.org), we are already free.  
 If you want to donate, you might consider donating to the [otherparty.co.uk](https://www.otherparty.co.uk/donate-crypto-the-other-party) to ensure people do not need to donate to victims but rather donate successfully to problem solvers.   
