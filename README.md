@@ -1,12 +1,12 @@
 # Freedom Cash
-🦕 [module](https://deno.land/x/freedom_cash) to stabilize the buy price and increase the sell price of [Freedom Cash](https://FreedomCash.org).
+🦕 [module](https://deno.land/x/freedom_cash) to stabilize the buy price and increase the sell price of [Freedom Cash](https://FreedomCash.org).  
 
-## Utility
+## Utility 
 Support peer to peer collaboration while preventing pump and dump frauds.  
 Reduce dependencies from exchanges by adding a [buy and sell function](https://github.com/monique-baumann/freedom-cash/blob/main/blockchain/freedom-cash.sol#L59-L71) within the [smart contract](https://github.com/monique-baumann/freedom-cash/blob/main/blockchain/freedom-cash.sol) itself.  
 This allows to define a reasonable [pricing algorithm](https://github.com/monique-baumann/freedom-cash/blob/main/blockchain/freedom-cash.sol#L49-L58) and ensures that people do not need to waste gas-, liquidity provider- and exchange fees.   
 
-## Usage Example
+## Usage Example Bollinger
 
 ```ts
 import { Bollinger } from "https://deno.land/x/freedom_cash/mod.ts";
@@ -38,7 +38,7 @@ deno run --allow-read --allow-write https://deno.land/x/freedom_cash/usage-examp
 <b>Why don't you create liquidity as an ETH/FreedomCash Tradingpair on Uniswap?</b>  
   
 With our approach we reduce gas fees and avoid exchange fees for Freedom Cash investors.
-Our pricing approach protects against ponzi like vulnerabilities & drops of the sell price guaranteed by the [smart contract](https://github.com/monique-baumann/freedom-cash/blob/main/blockchain/freedom-cash.sol).
+Our pricing approach protects against ponzi like vulnerabilities & drops of the [sell price](https://github.com/monique-baumann/freedom-cash/blob/main/blockchain/freedom-cash.sol#L54-L58).
 
 
 <b>What happens if anyone creates a liquidity pool for Freedom Cash on Uniswap?</b>  
@@ -50,6 +50,9 @@ People are free to create liquidity pools e.g. with ETH/FreedomCash liquidity on
 The sell price of Freedom Cash expressed in Ether can stay as it is or go up. It can never drop.
 Please study the [smart contract](https://github.com/monique-baumann/freedom-cash/blob/main/blockchain/freedom-cash.sol) and focus on the [getSellPrice](https://github.com/monique-baumann/freedom-cash/blob/main/blockchain/freedom-cash.sol#L54-L58) function.  
 
+## Usage Example Client
+There shall be many trustworthy frontends for Freedom Cash.  
+Programmers will be able to integrate Freedom Cash as svelte, angular or vue component starting in March 12th.
 
 ## Donations
 Thanks to [Freedom Cash](https://FreedomCash.org), we are already free.  
