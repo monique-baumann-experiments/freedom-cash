@@ -1,10 +1,10 @@
 
 export const smartContractAddress = '0x67450842119Dcb093102A950590e494d679AA714';
+
 export const targetChainName = 'Polygon ZKEVM';
-// export const targetChainId = '1';
-export const targetChainId = '1101'; // Sepolia Testnet
-// export const targetChainIdInHexadecimal = '0xaa36a7'; // Sepolia Testnet
-// export const baseURLScan = "https://etherscan.io/token/"
+
+export const targetChainId = '0x44d'; // == 1101 in decimal = Polygon ZKEVM
+
 export const baseURLScan = "https://zkevm.polygonscan.com/"
 
 export const freedomCashABI = [
