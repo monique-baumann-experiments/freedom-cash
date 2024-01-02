@@ -7,7 +7,7 @@
 
 	Geocashing for freedom. 
 	<p><br></p>
-	Will be released on March 12th 2024.
+	Will be released on March 2024.
 
 	<p><br /><br /></p>
 	<div class="center">

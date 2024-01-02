@@ -1,14 +1,17 @@
   /* SPDX-License-Identifier: GNU AFFERO GENERAL PUBLIC LICENSE Version 3
-Freedom Cash Helps Those Who Help Each Other Into Freedom, Fairness, Love and Peace. 
 
 Total Supply:   369.369.369 Freedom Cash (FREEDOMCASH)
-Utility:        Support peer to peer collaboration while preventing pump and dump frauds.  
+
+Utility:        Freedom Cash is the currency for the Freedom Enterprise. 
+                Freedom Cash supports peer to peer collaboration while preventing pump and dump frauds.  
                 Reduce dependency from exchanges by adding a buy and sell function within the smart contract itself.  
                 This allows to define a reasonable pricing algorithm and ensures that people do not need to waste 
                 gas-, liquidity provider- and exchange fees.  
+
 Liquidity:      The total supply of Freedom Cash is minted not to the developer or 
                 deployer but to the smart contract itself (see constructor address(this)). 
                 ETH liquidity is accrued automatically (see buy and sell function). 
+
 "Regulators":   Please think for yourself about the following while you go for a walk offline: 
                 The crimes of the "governments" you worked for, seem much more dangerous to humanity 
                 than the crimes which abuse freedom and privacy of money. 
@@ -22,6 +25,7 @@ Liquidity:      The total supply of Freedom Cash is minted not to the developer 
                 we invite you to join us, learn with us, help us and enjoy also
                 the technical pulses of freedom block by block by block by block by block by block 
                 by block by block by block
+                
 Wish:           Everyone who reads this with the best of intentions shall always have enough 
                 Freedom Cash stored within self hosted paperwallets which shall be utilized 
                 for fruitful and fair exploration of truth and peer to peer collaboration. 
@@ -32,10 +36,6 @@ Wish:           Everyone who reads this with the best of intentions shall always
 pragma solidity 0.8.19;
 import "https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/v4.9.4/contracts/token/ERC20/ERC20.sol";
 import "https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/v4.9.4/contracts/utils/math/Math.sol";
-import "https://github.com/Uniswap/v3-periphery/blob/v1.2.0/contracts/interfaces/ISwapRouter.sol";
-import "https://github.com/Uniswap/v3-core/blob/v1.0.0/contracts/interfaces/IUniswapV3Factory.sol";
-import "https://github.com/Uniswap/v3-core/blob/v1.0.0/contracts/interfaces/IUniswapV3Pool.sol";
-import "https://github.com/Uniswap/v3-core/blob/v1.0.0/contracts/libraries/FixedPoint96.sol";
 
 contract FreedomCash is ERC20 {
 

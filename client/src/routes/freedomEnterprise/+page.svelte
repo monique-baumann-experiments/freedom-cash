@@ -8,7 +8,7 @@ import { baseURLScan, smartContractAddress } from '../../constants.ts';
 <div class="text-center">
 	<h2>Freedom Enterprise</h2>
 
-	Will be released on March 12th 2024. 
+	Will be released on March 2024. 
 	
 	<p><br /><br /></p>
 	<div class="center">

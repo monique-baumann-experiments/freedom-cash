@@ -74,7 +74,7 @@
 
 <Seo
 	title="Home"
-	description="Freedom Cash Helps Those Who Help Each Other Into Freedom, Fairness, Love and Peace."
+	description="Freedom Cash is the currency for the Freedom Enterprise."
 />
 
 <main>
