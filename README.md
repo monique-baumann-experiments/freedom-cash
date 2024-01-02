@@ -3,8 +3,8 @@
 
 ## Utility
 Support peer to peer collaboration while preventing pump and dump frauds.  
-Reduce dependency from exchanges by adding a buy and sell function within the [smart contract](https://github.com/monique-baumann/freedom-cash/blob/main/blockchain/freedom-cash.sol#L47-L58) itself.  
-This allows to define a reasonable pricing algorithm and ensures that people do not need to waste gas-, liquidity provider- and exchange fees.   
+Reduce dependencies from exchanges by adding a [buy and sell function](https://github.com/monique-baumann/freedom-cash/blob/main/blockchain/freedom-cash.sol#L59-L71) within the [smart contract](https://github.com/monique-baumann/freedom-cash/blob/main/blockchain/freedom-cash.sol) itself.  
+This allows to define a reasonable [pricing algorithm](https://github.com/monique-baumann/freedom-cash/blob/main/blockchain/freedom-cash.sol#L47-L58) and ensures that people do not need to waste gas-, liquidity provider- and exchange fees.   
 
 ## Usage Example
 
