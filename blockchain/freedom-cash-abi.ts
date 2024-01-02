@@ -1,4 +1,4 @@
-export const freedomCashABI = [
+[
 	{
 		"inputs": [],
 		"stateMutability": "nonpayable",

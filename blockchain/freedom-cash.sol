@@ -38,9 +38,11 @@ import "https://github.com/Uniswap/v3-core/blob/v1.0.0/contracts/interfaces/IUni
 import "https://github.com/Uniswap/v3-core/blob/v1.0.0/contracts/libraries/FixedPoint96.sol";
 
 contract FreedomCash is ERC20 {
+
     error SellPriceMightHaveDropped();
     error BuyPriceMightHaveRisen();
     error TransferOfETHFailed();
+    
     constructor() ERC20("Freedom Cash", "FREEDOMCASH") {
         _mint(address(this), 369369369 * 10 ** decimals()); // into contract itself 
     }
@@ -52,9 +54,7 @@ contract FreedomCash is ERC20 {
     function getSellPrice() public view returns(uint256) {
         uint256 underway = totalSupply() - balanceOf(address(this)); 
         if (underway == 0) { return 0; }
-        uint256 sellPrice = Math.mulDiv(address(this).balance, 10**18, underway);
-        if (sellPrice > getBuyPrice(10**18)) sellPrice = getBuyPrice(10**18);
-        return sellPrice;
+        return Math.mulDiv(address(this).balance, 10**18, underway);
     }   
     function buyFreedomCash(uint256 fCAmount, uint256 fCBuyPrice) public payable {
         uint256 check = Math.mulDiv(msg.value, 10**18, fCBuyPrice); 
