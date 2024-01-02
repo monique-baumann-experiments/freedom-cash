@@ -1,5 +1,5 @@
 # Freedom Cash
-Freedom Cash Helps Those Who Help Each Other Into Freedom, Fairness, Love and Peace.
+🦕 module to stabilize the buy price and increase the sell price of [Freedom Cash](https://FreedomCash.org).
 
 ## Usage Example
 
