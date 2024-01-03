@@ -2,7 +2,6 @@
 	import { onMount } from 'svelte';
 	import { ethers } from 'ethers';
 	import { smartContractAddress, baseURLScan } from '../../constants.ts';
-	import ExecuteCommunityInvestment from '$components/ExecuteCommunityInvestment.svelte';
 	export let contract;
 	export let publicWalletAddressOfVisitor;
 	export let provider;
@@ -43,6 +42,7 @@
 </script>
 
 {#if readyForDisplay}
+<div class="tableDiv">
 	<table>
 		<tr>
 			<th>Key</th>
@@ -95,11 +95,15 @@
 			>
 		</tr>
 	</table>
+</div>
 {:else}
 	... loading data from blockchain ...
 {/if}
 
 <style>
+	.tableDiv{
+		overflow-x: scroll;
+	}
 	table {
 		font-family: arial, sans-serif;
 		border-collapse: collapse;
@@ -116,4 +120,5 @@
 	tr:nth-child(even) {
 		background-color: #dddddd;
 	}
+
 </style>

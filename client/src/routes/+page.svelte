@@ -14,7 +14,7 @@
 	import EducateYourself from '$components/EducateYourself.svelte';
 
 	let publicWalletAddressOfVisitor = '';
-	let visitorIsConnectedViaBrowserWallet = false;
+	let visitorIsConnectedViaBrowserWallet = false
 	let visitorHasBrowserWallet = false;
 	let chainId = '';
 	let contract;

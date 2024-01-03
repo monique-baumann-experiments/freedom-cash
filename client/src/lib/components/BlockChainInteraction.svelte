@@ -2,20 +2,14 @@
 	import { onMount } from 'svelte';
 	import { ethers } from 'ethers';
 	import SellFreedomCash from '$components/SellFreedomCash.svelte';
-	import PublicGoodsFunding from '$components/PublicGoodsFunding.svelte';
 	import InvestIntoFreedomCash from '$components/InvestIntoFreedomCash.svelte';
-	import InvestmentBets from '$components/InvestmentBets.svelte';
-	import GeoCashing from '$components/GeoCashing.svelte';
 	import { smartContractAddress } from '../../constants.ts';
 	import FeedbackToVisitor from './FeedbackToVisitor.svelte';
 	export let contract;
 	export let publicWalletAddressOfVisitor;
 	export let provider;
 
-	let playInvestmentBets;
 	let investIntoFreedomCash;
-	let playGeocashing;
-	let playPublicGoodsFunding;
 	let sellFreedomCash;
 	let balanceInSmartContract;
     let fb = { context: "", message: "" }
