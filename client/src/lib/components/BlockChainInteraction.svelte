@@ -34,7 +34,7 @@
 <button class="button" on:click={() => (sellFreedomCash = !sellFreedomCash)}>Sell Freedom Cash</button>
 {#if sellFreedomCash}
 	<p><br /><br /></p>
-	<SellFreedomCash {contract}></SellFreedomCash>
+	<SellFreedomCash {contract} {publicWalletAddressOfVisitor}></SellFreedomCash>
 	<p><br /><br /></p>
 {/if}
 

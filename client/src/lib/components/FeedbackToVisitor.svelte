@@ -3,6 +3,7 @@
 	import { createEventDispatcher } from 'svelte';
 
 	export let message = '';
+	export let publicWalletAddressOfVisitor = '';
 
 	const dispatch = createEventDispatcher();
 </script>
@@ -10,7 +11,7 @@
 <p><br /></p>
 You can observe your interactions with the
 <a href="{baseURLScan}token/{smartContractAddress}" target="_blank">Freedom Cash</a> Smart Contract
-<a href="https://etherscan.io" target="_blank">here on etherscan.io</a>.
+<a href="{baseURLScan}token/{smartContractAddress}?a={publicWalletAddressOfVisitor}}" target="_blank">here on zkevm.polygonscan.com</a>.
 <p><br /></p>
 {message}
 
