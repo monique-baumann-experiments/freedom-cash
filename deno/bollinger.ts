@@ -9,6 +9,10 @@ export class Bollinger {
     public static logger
 
     public static async getInstance(relevantHistoryLength: number) {
+        console.log(relevantHistoryLength)
+        if(relevantHistoryLength < 3 || relevantHistoryLength > 9999){
+            throw new Error(`you might reconsider your parameterization for relevantHistoryLength`)
+        }
         if (Bollinger.logger === undefined){
             const minLevelForConsole = 'DEBUG'
             const minLevelForFile = 'WARNING'
