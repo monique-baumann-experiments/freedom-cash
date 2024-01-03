@@ -1,4 +1,4 @@
-import{s as c,n as p}from"../chunks/scheduler.63274e7e.js";import{S as u,i as _,r as f,s as d,g as h,u as v,c as b,h as g,z as $,k as x,v as y,a as i,d as S,t as q,f as l,w as C}from"../chunks/index.4fecda98.js";import{S as M}from"../chunks/Seo.a31ec95e.js";import{b as k,s as w}from"../chunks/constants.9862f53f.js";function z(m){let t,a,s,o=`<h2>Freedom Enterprise</h2>
+import{s as c,n as p}from"../chunks/scheduler.63274e7e.js";import{S as u,i as _,r as f,s as d,g as h,u as v,c as b,h as g,z as $,k as x,v as y,a as i,d as S,t as q,f as l,w as C}from"../chunks/index.4fecda98.js";import{S as M}from"../chunks/Seo.ea3414a1.js";import{b as k,s as w}from"../chunks/constants.9862f53f.js";function z(m){let t,a,s,o=`<h2>Freedom Enterprise</h2>
 
 	Will be released on March 2024.
 

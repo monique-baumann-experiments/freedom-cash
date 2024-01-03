@@ -37,23 +37,37 @@
 				});
 
 				if (chainId !== targetChainId) {
-					await window.ethereum.request({
-						method: 'wallet_switchEthereumChain',
-						params: [{ chainId: targetChainId }]
-					});
-				} else {
-					accounts = await window.ethereum.request({
-						method: 'eth_requestAccounts'
-					});
-
-					provider = new ethers.BrowserProvider(window.ethereum);
-					const signer = await provider.getSigner();
-					contract = new ethers.Contract(smartContractAddress, freedomCashABI, signer);
-
-					publicWalletAddressOfVisitor = accounts[0];
-					window.ethereum.on('chainChanged', handleChainChanged);
-					visitorIsConnectedViaBrowserWallet = true;
+					try {
+						await window.ethereum.request({
+							method: 'wallet_switchEthereumChain',
+							params: [{ chainId: targetChainId }]
+						});
+					} catch (error) {
+						await window.ethereum.request({
+							method: 'wallet_addEthereumChain',
+							params: [
+								{
+									chainId: '0x44d',
+									chainName: 'Polygon zkEVM',
+									rpcUrls: ['https://zkevm-rpc.com'],
+									nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+									blockExplorerUrls: ['https://zkevm.polygonscan.com']
+								}
+							]
+						});
+					}
 				}
+				accounts = await window.ethereum.request({
+					method: 'eth_requestAccounts'
+				});
+
+				provider = new ethers.BrowserProvider(window.ethereum);
+				const signer = await provider.getSigner();
+				contract = new ethers.Contract(smartContractAddress, freedomCashABI, signer);
+
+				publicWalletAddressOfVisitor = accounts[0];
+				window.ethereum.on('chainChanged', handleChainChanged);
+				visitorIsConnectedViaBrowserWallet = true;
 			} catch (error) {
 				alert(error.message);
 			}
