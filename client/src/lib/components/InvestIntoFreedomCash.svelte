@@ -8,11 +8,19 @@
 		const amountToBeBoughtInWei = ethers.parseEther(amountToBeBought.toString());
 		const buyPrice = Number(await contract.getBuyPrice(amountToBeBoughtInWei));
 		const cost = amountToBeBought * buyPrice;
-		const ethInWallet = Number(await provider.getBalance(publicWalletAddressOfVisitor).toString());
-		let result = await contract.buyFreedomCash(amountToBeBoughtInWei, buyPrice, {
-			value: BigInt(cost)
-		});
-		console.log(result);
+		const ethInWallet = BigInt(await provider.getBalance(publicWalletAddressOfVisitor));
+		if (ethInWallet < cost) {
+			alert('you might enter a smaller amount');
+		} else {
+			try {
+				let result = await contract.buyFreedomCash(amountToBeBoughtInWei, buyPrice, {
+					value: BigInt(cost)
+				});
+				console.log(result);
+			} catch (error) {
+				alert(error.message);
+			}
+		}
 	}
 </script>
 

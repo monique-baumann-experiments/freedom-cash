@@ -14,7 +14,7 @@
 	import EducateYourself from '$components/EducateYourself.svelte';
 
 	let publicWalletAddressOfVisitor = '';
-	let visitorIsConnectedViaBrowserWallet = false
+	let visitorIsConnectedViaBrowserWallet = false;
 	let visitorHasBrowserWallet = false;
 	let chainId = '';
 	let contract;
@@ -112,6 +112,17 @@
 		>
 		<h4 class="text-center">Utility</h4>
 		Funding playgrounds for freedom.
+		<p><br /></p>
+		Freedom Cash is the currency for the
+		<a
+			href="https://github.com/monique-baumann/FreedomEnterprise/blob/main/README.md"
+			target="_blank">Freedom Enterprise</a
+		>. 
+		<p><br></p>
+		Freedom Cash supports peer to peer collaboration while preventing pump and dump frauds.
+		Reduce dependency from exchanges by adding a buy and sell function within the smart contract
+		itself. This allows to define a reasonable pricing algorithm and ensures that people do not need
+		to waste gas-, liquidity provider- and exchange fees.
 
 		<h4 class="text-center">Liquidity</h4>
 		The total supply of Freedom Cash was minted not to the developer or deployer but to the
