@@ -5,11 +5,10 @@ import { Logger, IBollingerBands, BollingerBandsService } from "../deps.ts"
 
 export class Bollinger {
 
-    public static instance
-    public static logger
+    private static instance
+    private static logger
 
     public static async getInstance(relevantHistoryLength: number) {
-        console.log(relevantHistoryLength)
         if(relevantHistoryLength < 3 || relevantHistoryLength > 9999){
             throw new Error(`you might reconsider your parameterization for relevantHistoryLength`)
         }
