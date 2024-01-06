@@ -5,28 +5,14 @@ import { Logger, IBollingerBands, BollingerBandsService } from "../deps.ts"
 
 export class Bollinger {
 
-    private static instance
-    private static logger
-
-    public static async getInstance(relevantHistoryLength: number) {
-        if (relevantHistoryLength < 3 || relevantHistoryLength > 9999) {
-            throw new Error(`you might reconsider your parameterization for relevantHistoryLength`)
-        }
-        if (Bollinger.logger === undefined) {
-            const minLevelForConsole = 'DEBUG'
-            const minLevelForFile = 'WARNING'
-            const fileName = "./warnings-errors.txt"
-            const pureInfo = true // leaving out e.g. the time info
-            Bollinger.logger = await Logger.getInstance(minLevelForConsole, minLevelForFile, fileName, pureInfo)
-        }
-        return new Bollinger(relevantHistoryLength, Bollinger.logger)
-    }
-
     protected priceHistory: number[]
     protected relevantHistoryLength: number
     protected logger: Logger
 
-    protected constructor(relevantHistoryLength: number, logger: Logger) {
+    public constructor(relevantHistoryLength: number, logger: Logger) {
+        if (relevantHistoryLength < 3 || relevantHistoryLength > 9999) {
+            throw new Error(`you might reconsider your parameterization for relevantHistoryLength`)
+        }
         this.priceHistory = []
         this.relevantHistoryLength = relevantHistoryLength
         this.logger = logger

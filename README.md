@@ -23,7 +23,7 @@ await monique.play(sleepTimePerInterval, minHistoryLength, relevantHistoryLength
 ```ts
 import { MoniqueBaumann } from "https://deno.land/x/freedom_cash/mod.ts";
 const receiverWallets = [ ] // e.g. geocashing wallets / supportive communities wallets etc.
-const sleepTimePerInterval = 81 // you can also combine long and short term bollingers (instantiating several ones...)
+const sleepTimePerInterval = 81 // you can also combine long and short term bollingers via several processes
 const minHistoryLength = 36
 const relevantHistoryLength = 99
 const factor = 3

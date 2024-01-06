@@ -34,7 +34,7 @@ export class MoniqueDemo extends MoniqueBaumann {
 
     protected async stabilizeBuyPriceIncreaseSellPrice(sleepTime: number, minHLength: number, hL: number, factor: number) {
 
-        const bollinger = await Bollinger.getInstance(hL)
+        const bollinger = new Bollinger(hL, this.logger)
         const freedomCashRocks = true
 
         while (freedomCashRocks) { // shall be true until people create and utilize something better
