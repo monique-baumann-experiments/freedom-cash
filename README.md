@@ -6,35 +6,46 @@ Support peer to peer collaboration while preventing pump and dump frauds.
 Reduce dependencies from exchanges by adding a [buy and sell function](https://github.com/monique-baumann/freedom-cash/blob/main/blockchain/freedom-cash.sol#L59-L71) within the [smart contract](https://github.com/monique-baumann/freedom-cash/blob/main/blockchain/freedom-cash.sol) itself.  
 This allows to define a reasonable [pricing algorithm](https://github.com/monique-baumann/freedom-cash/blob/main/blockchain/freedom-cash.sol#L49-L58) and ensures that people do not need to waste gas-, liquidity provider- and exchange fees.   
 
-## Usage Example Bollinger
+## Usage Example Beginners Demo
 
 ```ts
-import { Bollinger } from "https://deno.land/x/freedom_cash/mod.ts";
-import { sleep } from "https://deno.land/x/sleep/mod.ts";
 
-const sleepTimePerInterval = 9
+import { MoniqueDemo } from "./deno/monique-demo.ts";
+
+const sleepTimePerInterval = 3
 const minHistoryLength = 3
 const relevantHistoryLength = 99
 const factor = 3
-const bollinger = await Bollinger.getInstance(relevantHistoryLength)
 
-let repeatXMoreTimes = 9 
-
-while (repeatXMoreTimes > 0) {
-    const randomNumber = Math.round((Math.random() * (81 - 9) + 9))
-    bollinger.addToPriceHistory(randomNumber)
-    const investmentDecision = bollinger.getInvestmentDecision(minHistoryLength, factor)
-    console.log("O.K. I will:", investmentDecision)
-    await sleep(sleepTimePerInterval)
-    repeatXMoreTimes--
-}
+const monique = await MoniqueDemo.getInstance()
+await monique.play(sleepTimePerInterval, minHistoryLength, relevantHistoryLength, factor)
 ```
 
-## Execute Usage Example Bollinger
+## Execute Usage Example Beginners Demo
 
 ```sh
-deno run --allow-read --allow-write https://deno.land/x/freedom_cash/usage-example.ts
+deno run --allow-read --allow-write https://deno.land/x/freedom_cash/usage-example-beginners-demo.ts
 ```
+
+## Usage Example Advanced
+```ts
+import { MoniqueBaumann } from "./deno/monique-baumann.ts";
+
+const receiverWallets = [ ] // e.g. geocashing wallets / supportive communities wallets etc.
+const sleepTimePerInterval = 81 // you can also combine long and short term bollingers (instantiating several ones...)
+const minHistoryLength = 36
+const relevantHistoryLength = 99
+const factor = 3
+
+const monique = await MoniqueBaumann.getInstance()
+await monique.play(receiverWallets, sleepTimePerInterval, minHistoryLength, relevantHistoryLength, factor)
+```
+
+## Execute Usage Example Advanced
+```ts
+deno run --allow-read --allow-write https://deno.land/x/freedom_cash/usage-example-advanced.ts
+```
+
 
 ## Q&A 
 <b>Why don't you create liquidity as an ETH/FreedomCash Tradingpair on Uniswap?</b>  
