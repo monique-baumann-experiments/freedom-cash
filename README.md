@@ -60,7 +60,7 @@ People are free to create liquidity pools e.g. with ETH/FreedomCash liquidity on
 
 <b>How is it possible that the sell price never drops?</b>  
   
-The sell price of Freedom Cash expressed in Ether can stay as it is or go up. It can never drop.
+The sell price of Freedom Cash expressed in Ether and sold via the smart contract can stay as it is or go up. It can never drop.
 Please study the [smart contract](https://github.com/monique-baumann/freedom-cash/blob/main/blockchain/freedom-cash.sol) and focus on the [getSellPrice](https://github.com/monique-baumann/freedom-cash/blob/main/blockchain/freedom-cash.sol#L54-L58) function.  
 
 ## Usage Example Client

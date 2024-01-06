@@ -8,4 +8,4 @@ const relevantHistoryLength = 99
 const factor = 3
 
 const monique = await MoniqueBaumann.getInstance()
-await monique.play(receiverWallets, sleepTimePerInterval, minHistoryLength, relevantHistoryLength, factor)
+await monique.play(sleepTimePerInterval, minHistoryLength, relevantHistoryLength, factor, receiverWallets)
