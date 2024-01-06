@@ -9,41 +9,34 @@ This allows to define a reasonable [pricing algorithm](https://github.com/moniqu
 ## Usage Example Beginners Demo
 
 ```ts
-
-import { MoniqueDemo } from "./deno/monique-demo.ts";
+import { MoniqueDemo } from "https://deno.land/x/freedom_cash/mod.ts"
 
 const sleepTimePerInterval = 3
 const minHistoryLength = 3
 const relevantHistoryLength = 99
 const factor = 3
-
 const monique = await MoniqueDemo.getInstance()
 await monique.play(sleepTimePerInterval, minHistoryLength, relevantHistoryLength, factor)
 ```
 
-## Execute Usage Example Beginners Demo
-
-```sh
-deno run --allow-read --allow-write https://deno.land/x/freedom_cash/usage-example-beginners-demo.ts
-```
-
 ## Usage Example Advanced
 ```ts
-import { MoniqueBaumann } from "./deno/monique-baumann.ts";
-
+import { MoniqueBaumann } from "https://deno.land/x/freedom_cash/mod.ts";
 const receiverWallets = [ ] // e.g. geocashing wallets / supportive communities wallets etc.
 const sleepTimePerInterval = 81 // you can also combine long and short term bollingers (instantiating several ones...)
 const minHistoryLength = 36
 const relevantHistoryLength = 99
 const factor = 3
-
 const monique = await MoniqueBaumann.getInstance()
-await monique.play(receiverWallets, sleepTimePerInterval, minHistoryLength, relevantHistoryLength, factor)
+await monique.play(sleepTimePerInterval, minHistoryLength, relevantHistoryLength, factor, receiverWallets)
 ```
 
-## Execute Usage Example Advanced
-```ts
-deno run --allow-read --allow-write https://deno.land/x/freedom_cash/usage-example-advanced.ts
+For this to work you can create a .env.json file... ensure you keep it save and local - add a corresponding entry to .gitignore
+```json
+{
+    "pkTestWallet": "", // use an experimental low budget wallet to reduce risk
+    "providerURL": "https://rpc.buildbear.io/<your input>" // use your own Ethereum node API or another provider URL you trust
+}
 ```
 
 
