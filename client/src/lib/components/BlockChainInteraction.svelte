@@ -9,30 +9,32 @@
 	export let publicWalletAddressOfVisitor;
 	export let provider;
 
-	let investIntoFreedomCash;
-	let sellFreedomCash;
+	let investIntoFreedomCash = false;
+	let sellFreedomCash = false;
 	let balanceInSmartContract;
-    let fb = { context: "", message: "" }
+	let fb = { context: '', message: '' };
 
 	onMount(async () => {
-		balanceInSmartContract = ethers.formatEther(
-			await contract.balanceOf(smartContractAddress)
-		);
+		balanceInSmartContract = ethers.formatEther(await contract.balanceOf(smartContractAddress));
 	});
-
 </script>
 
-<button class="button" on:click={() => (investIntoFreedomCash = !investIntoFreedomCash)}
-	>Buy Freedom Cash</button
->
-{#if investIntoFreedomCash}
+{#if investIntoFreedomCash === false}
+	<button
+		class="button"
+		on:click={() => {
+			investIntoFreedomCash = true;
+		}}>Invest Into Freedom Cash</button
+	>
+{:else}
 	<InvestIntoFreedomCash {contract} {publicWalletAddressOfVisitor} {provider}
 	></InvestIntoFreedomCash>
 {/if}
 <p><br /></p>
 
-<button class="button" on:click={() => (sellFreedomCash = !sellFreedomCash)}>Sell Freedom Cash</button>
-{#if sellFreedomCash}
+{#if sellFreedomCash === false}
+	<button class="button" on:click={() => (sellFreedomCash = true)}>Sell Freedom Cash</button>
+{:else}
 	<p><br /><br /></p>
 	<SellFreedomCash {contract} {publicWalletAddressOfVisitor}></SellFreedomCash>
 	<p><br /><br /></p>
@@ -40,7 +42,5 @@
 
 <p><br /></p>
 
-
 <style>
-
 </style>

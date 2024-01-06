@@ -20,6 +20,7 @@
 	let contract;
 	let accounts;
 	let provider;
+	let buttonText = `Connect To ${targetChainName}`
 
 	onMount(() => {
 		if (typeof window.ethereum === 'undefined') {
@@ -56,6 +57,8 @@
 							]
 						});
 					}
+				} else {
+					buttonText = "Invest Into Freedom Cash"
 				}
 				accounts = await window.ethereum.request({
 					method: 'eth_requestAccounts'
@@ -68,6 +71,7 @@
 				publicWalletAddressOfVisitor = accounts[0];
 				window.ethereum.on('chainChanged', handleChainChanged);
 				visitorIsConnectedViaBrowserWallet = true;
+
 			} catch (error) {
 				alert(error.message);
 			}
@@ -119,10 +123,9 @@
 			target="_blank">Freedom Enterprise</a
 		>. 
 		<p><br></p>
-		Freedom Cash supports peer to peer collaboration while preventing pump and dump frauds.
-		Reduce dependency from exchanges by adding a buy and sell function within the smart contract
-		itself. This allows to define a reasonable pricing algorithm and ensures that people do not need
-		to waste gas-, liquidity provider- and exchange fees.
+		<!-- Freedom Cash supports peer to peer collaboration while preventing pump and dump frauds. <br> -->
+		Freedom Cash provides a buy and sell function within the smart contract
+		itself, defining a reasonable pricing algorithm and ensuring that people do not waste gas-, liquidity provider- and exchange fees.
 
 		<h4 class="text-center">Liquidity</h4>
 		The total supply of Freedom Cash was minted not to the developer or deployer but to the
@@ -174,10 +177,10 @@
 		<p><br /></p>
 		It might take a while until people realize that the sell price is at all times the minimum sell price
 		which will never go below the current value expressed in Ether - even in a "bankrun" like situation.
-		So if you find any catch other than people just not getting it until everyone wants to get it, please
-		raise an issue
-		<a href="https://github.com/monique-baumann/freedom-cash/issues/new" target="_blank">here</a>.
 		<EducateYourself></EducateYourself>
+		<p><br></p>
+		If you find any serious catch, please raise an issue 
+		<a href="https://github.com/monique-baumann/freedom-cash/issues/new" target="_blank">here</a>.
 		<p><br /></p>
 		{#if !visitorHasBrowserWallet}
 			Please install a browserwallet which you trust like
@@ -192,7 +195,7 @@
 					connectToBlockchain();
 				}}
 			>
-				Connect To {targetChainName}
+				{buttonText}
 			</button>
 		{:else}
 			<h4 class="text-center">State of the Game</h4>

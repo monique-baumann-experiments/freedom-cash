@@ -5,7 +5,7 @@
 	export let contract;
 	export let publicWalletAddressOfVisitor;
 
-	let amount = 0;
+	let amount = 1;
 	let sellPrice = 0;
 	let visitorInformed = true;
 
@@ -24,7 +24,6 @@
 	}
 </script>
 
-<h2 class="text-center">Sell Freedom Cash</h2>
 <section class="text-center">
 	{#if visitorInformed}
 		<br />
