@@ -1,4 +1,4 @@
-import{s as c,a as p,f as u,c as _,g as f,z as d,j as h,i,C as g,d as l}from"../chunks/scheduler.646e10fa.js";import{S as b,i as v,b as $,d as q,m as w,a as x,t as y,e as M}from"../chunks/index.a3a4acac.js";import{S}from"../chunks/Seo.dac1f770.js";function C(m){let t,s,a,r=`<h2>Freedom Goods</h2>
+import{s as c,a as p,f as u,c as _,g as f,z as d,j as h,i,C as g,d as l}from"../chunks/scheduler.646e10fa.js";import{S as b,i as v,b as $,d as q,m as w,a as x,t as y,e as M}from"../chunks/index.a3a4acac.js";import{S}from"../chunks/Seo.bffa642b.js";function C(m){let t,s,a,r=`<h2>Freedom Goods</h2>
 
 	Will be released on March 12th 2024.
 
