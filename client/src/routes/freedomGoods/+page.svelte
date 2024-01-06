@@ -12,13 +12,12 @@
 
 	<p><br /><br /></p>
 	<div class="center">
-		<img class="moniqueImage" src="/monique-baumann.jpeg" alt="" />
+		<img class="moniqueImage" src="https://github.com/monique-baumann/FreedomEnterprise/assets/145258627/7a58cce2-5e01-4e2a-b004-2623819d396f" alt="tea" />
 	</div>
 	<p><br /></p>
 
-	I buy and sell
-	<a href="{baseURLScan}token/{smartContractAddress}" target="_blank">Freedom Cash</a>.
-	<i>Monique Baumann</i>
+	If we do not own freedom, we might own nothing at all.
+	<a href="https://github.com/monique-baumann" target="_blank"><i>Monique Baumann</i></a>
 	<p><br /></p>
 </div>
 

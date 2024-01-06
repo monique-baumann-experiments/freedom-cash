@@ -9,10 +9,10 @@ export class Bollinger {
     private static logger
 
     public static async getInstance(relevantHistoryLength: number) {
-        if(relevantHistoryLength < 3 || relevantHistoryLength > 9999){
+        if (relevantHistoryLength < 3 || relevantHistoryLength > 9999) {
             throw new Error(`you might reconsider your parameterization for relevantHistoryLength`)
         }
-        if (Bollinger.logger === undefined){
+        if (Bollinger.logger === undefined) {
             const minLevelForConsole = 'DEBUG'
             const minLevelForFile = 'WARNING'
             const fileName = "./warnings-errors.txt"
@@ -30,7 +30,7 @@ export class Bollinger {
         this.priceHistory = []
         this.relevantHistoryLength = relevantHistoryLength
         this.logger = logger
-        this.logger.debug(`creating a bollinger with relevantHistoryLength: ${relevantHistoryLength}`)        
+        this.logger.debug(`creating a bollinger with relevantHistoryLength: ${relevantHistoryLength}`)
     }
 
     public addToPriceHistory(price: number): void {
@@ -52,23 +52,25 @@ export class Bollinger {
     }
 
     public getInvestmentDecision(minHistoryLength: number, factor: number): string {
-        if(this.priceHistory.length < minHistoryLength) { 
+        if (this.priceHistory.length < minHistoryLength) {
             this.logger.info(`\n\nWe need to wait ${minHistoryLength - this.priceHistory.length} more intervals.`)
-            return "hold" 
+            return "hold"
         }
         const currentPrice = this.priceHistory[this.priceHistory.length - 1]
         this.logger.info(`\n\ncurrent price: ${currentPrice}`)
         const wouldBuyAt = this.getBollingerBands(factor).lower[this.priceHistory.length - 1]
-        this.logger.debug(`wouldBuyAt: ${wouldBuyAt}`)
-        const wouldSellAt = this.getBollingerBands(factor).upper[this.priceHistory.length - 1]
-        this.logger.debug(`wouldSellAt: ${wouldSellAt}`)
-        let investmentDecision
-        if (currentPrice <= wouldBuyAt) {
-            investmentDecision = "buy"
-        } else if (currentPrice >= wouldSellAt) {
-            investmentDecision = "sell"
+        let investmentDecision = "hold"
+        if (wouldBuyAt === currentPrice) {
+            this.logger.debug(`No volatility yet.`)
         } else {
-            investmentDecision = "hold"
+            this.logger.debug(`wouldBuyAt: ${wouldBuyAt}`)
+            const wouldSellAt = this.getBollingerBands(factor).upper[this.priceHistory.length - 1]
+            this.logger.debug(`wouldSellAt: ${wouldSellAt}`)
+            if (currentPrice <= wouldBuyAt) {
+                investmentDecision = "buy"
+            } else if (currentPrice >= wouldSellAt) {
+                investmentDecision = "sell"
+            } 
         }
         this.logger.info(`investmentDecision: ${investmentDecision}`)
         return investmentDecision
