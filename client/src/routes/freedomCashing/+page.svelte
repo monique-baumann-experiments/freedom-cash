@@ -11,7 +11,7 @@
 
 	<p><br /><br /></p>
 	<div class="center">
-		<img class="moniqueImage" src="/monique-baumann.jpeg" alt="" />
+		<img class="moniqueImage" src="https://github.com/monique-baumann/FreedomEnterprise/assets/145258627/1e671c0b-91b8-433e-95de-010c87317db4" alt="paperwallet" />
 	</div>
 	<p><br /></p>
 

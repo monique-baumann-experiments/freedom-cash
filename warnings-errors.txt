@@ -1,1 +1,2 @@
-warnings-errors.txt
+warnings-errors.txtWARNING Sat Jan 06 2024 14:45:14 GMT+0100 (Central European Standard Time) wallet 0xCa42310B988d735Fffe2ABDd1cdE5B92EC75c39b already has 11000000000000000000 Freedom Cash
+WARNING Sat Jan 06 2024 14:45:38 GMT+0100 (Central European Standard Time) wallet 0xfDCB82eB79eb20d540d807f72040320309C74e1a already has 14000000000000000000 Freedom Cash
