@@ -1,0 +1,1 @@
+cat ./deno/donation-helpers/9-million-till-999-million-CULT-on-jan-7-2024.txt | cut -d "," -f1 >> ./deno/donation-helpers/just-addresses.txt

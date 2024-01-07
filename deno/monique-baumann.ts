@@ -30,7 +30,6 @@ export class MoniqueBaumann {
         await this.decentralize(receiverWallets)
         await this.stabilizeBuyPriceIncreaseSellPrice(sleepTime, minHLength, hL, factor)
     }
-
     protected async stabilizeBuyPriceIncreaseSellPrice(sleepTime: number, minHLength: number, hL: number, factor: number) {
 
         const bollinger = new Bollinger(hL, this.logger)

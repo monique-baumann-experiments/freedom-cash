@@ -34,7 +34,7 @@
 	}
 </script>
 
-<p><br /><br /></p>
+<p><br /></p>
 {#if visitorInformed}
 	{#if etherAmountAvailable > 0}
 		How much Freedom Cash do you want to buy?
