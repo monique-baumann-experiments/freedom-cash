@@ -45,13 +45,13 @@
 	<p><br /></p>
 	One of the best ways to store your crypto assets are self hosted (only you have the private key), cold
 	(not connected to the internet) wallets. You can check the code of our paperwallet generator
-	<a href="https://github.com/michael-spengler/paperwallet-generator" target="_blank">here</a>.
+	<a href="https://monique-baumann.github.io/paperwallet-generator" target="_blank">here</a>.
 	<p><br /></p>
 	This is a hobby project with the best of intentions. Please do your own research before moving huge
 	amounts.
 	<p><br /></p>
 	<embed
-		src="https://michael-spengler.github.io/paperwallet-generator/"
+		src="https://monique-baumann.github.io/paperwallet-generator/"
 		width="100%"
 		height="810"
 	/>

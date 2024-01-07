@@ -3,5 +3,5 @@ Please study the
 `),n=o("a"),n.textContent=l,i=d(`
 so that you can explain it to your friends if you like it.`),this.h()},l(e){t=m(e,"P",{"data-svelte-h":!0}),c(t)!=="svelte-pntvnr"&&(t.innerHTML=y),a=f(e,`
 Please study the
-`),n=m(e,"A",{href:!0,target:!0,"data-svelte-h":!0}),c(n)!=="svelte-25bt0c"&&(n.textContent=l),i=f(e,`
-so that you can explain it to your friends if you like it.`),this.h()},h(){b(n,"href",g+"token/"+x),b(n,"target","_blank")},m(e,s){p(e,t,s),p(e,a,s),p(e,n,s),p(e,i,s)},p:r,i:r,o:r,d(e){e&&(u(t),u(a),u(n),u(i))}}}class S extends h{constructor(t){super(),M(this,t,null,C,v,{})}}export{S as E,_ as a,g as b,A as f,x as s,P as t};
+`),n=m(e,"A",{href:!0,target:!0,"data-svelte-h":!0}),c(n)!=="svelte-145py1a"&&(n.textContent=l),i=f(e,`
+so that you can explain it to your friends if you like it.`),this.h()},h(){b(n,"href",g+"token/"+x+"#code#L891"),b(n,"target","_blank")},m(e,s){p(e,t,s),p(e,a,s),p(e,n,s),p(e,i,s)},p:r,i:r,o:r,d(e){e&&(u(t),u(a),u(n),u(i))}}}class S extends h{constructor(t){super(),M(this,t,null,C,v,{})}}export{S as E,_ as a,g as b,A as f,x as s,P as t};

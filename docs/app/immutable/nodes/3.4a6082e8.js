@@ -1,4 +1,4 @@
-import{s as n,f as i,g as l,z as p,j as h,i as c,C as a,d as b}from"../chunks/scheduler.646e10fa.js";import{S as m,i as u}from"../chunks/index.a3a4acac.js";function d(o){let e,r=`<h2>Freedom Cashing</h2>
+import{s,f as i,g as l,z as p,j as h,i as c,C as a,d as b}from"../chunks/scheduler.646e10fa.js";import{S as u,i as m}from"../chunks/index.a3a4acac.js";function d(o){let e,r=`<h2>Freedom Cashing</h2>
 
 	Geocashing for freedom.
 	<p><br/></p>
@@ -23,8 +23,8 @@ import{s as n,f as i,g as l,z as p,j as h,i as c,C as a,d as b}from"../chunks/sc
 	<p><br/><br/></p> <h6>Offline Wallets</h6> <p><br/></p>
 	One of the best ways to store your crypto assets are self hosted (only you have the private key), cold
 	(not connected to the internet) wallets. You can check the code of our paperwallet generator
-	<a href="https://github.com/michael-spengler/paperwallet-generator" target="_blank">here</a>.
+	<a href="https://monique-baumann.github.io/paperwallet-generator" target="_blank">here</a>.
 	<p><br/></p>
 	This is a hobby project with the best of intentions. Please do your own research before moving huge
 	amounts.
-	<p><br/></p> <embed src="https://michael-spengler.github.io/paperwallet-generator/" width="100%" height="810"/> <p><br/></p>`;return{c(){e=i("div"),e.innerHTML=r,this.h()},l(t){e=l(t,"DIV",{class:!0,"data-svelte-h":!0}),p(e)!=="svelte-1j3g58b"&&(e.innerHTML=r),this.h()},h(){h(e,"class","text-center")},m(t,s){c(t,e,s)},p:a,i:a,o:a,d(t){t&&b(e)}}}class w extends m{constructor(e){super(),u(this,e,null,d,n,{})}}export{w as component};
+	<p><br/></p> <embed src="https://monique-baumann.github.io/paperwallet-generator/" width="100%" height="810"/> <p><br/></p>`;return{c(){e=i("div"),e.innerHTML=r,this.h()},l(t){e=l(t,"DIV",{class:!0,"data-svelte-h":!0}),p(e)!=="svelte-98z01t"&&(e.innerHTML=r),this.h()},h(){h(e,"class","text-center")},m(t,n){c(t,e,n)},p:a,i:a,o:a,d(t){t&&b(e)}}}class w extends u{constructor(e){super(),m(this,e,null,d,s,{})}}export{w as component};

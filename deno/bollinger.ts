@@ -1,5 +1,4 @@
 // This code is utilized e.g. to stabilize the buy price and to increase the sell price for Freedom Cash
-// https://github.com/monique-baumann/freedom-cash  
 
 import { Logger, IBollingerBands, BollingerBandsService } from "../deps.ts"
 

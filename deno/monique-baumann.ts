@@ -1,5 +1,5 @@
 import { Logger, ethers, sleep } from "../deps.ts"
-import { getLogger, getProvider, EDataTypes, getContract, FC } from "./constants-types-infrastructure.ts"
+import { getLogger, getProvider, getContract, FC } from "./constants-types-infrastructure.ts"
 import { Bollinger } from "./bollinger.ts";
 
 export class MoniqueBaumann {
