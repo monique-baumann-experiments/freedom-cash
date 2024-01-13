@@ -1,9 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
 	import FeedbackToVisitor from './FeedbackToVisitor.svelte';
-	// import { ethers } from 'ethers';
+	import { ethers } from 'ethers';
 	export let contract;
-	export let publicWalletAddressOfVisitor;
 
 	let amount = 1;
 	let sellPrice = 0;
@@ -15,7 +14,8 @@
 	async function sellFreedomCash() {
 		try {
 			sellPrice = await contract.getSellPrice(); // to be up to date
-			let result = await contract.sellFreedomCash(BigInt(amount.toString()), sellPrice.toString());
+			const amountToBeSoldInWei = ethers.parseEther(amount.toString());
+			let result = await contract.sellFreedomCash(amountToBeSoldInWei, sellPrice.toString());
 			visitorInformed = false;
 			console.log(`result: ${result}`);
 		} catch (error) {
@@ -26,7 +26,6 @@
 
 <section class="text-center">
 	{#if visitorInformed}
-		<br />
 		How much would you like to sell?
 		<p><br /></p>
 
@@ -37,7 +36,6 @@
 			placeholder="your investment e.g. 0.000000009 ETH"
 		/>
 		<p><br /></p>
-		<p><br /></p>
 
 		{#if amount > 0}
 			<button class="inside" on:click={() => sellFreedomCash()}>Sell Freedom Cash</button>
@@ -47,7 +45,6 @@
 			on:clickedOK={() => {
 				visitorInformed = true;
 			}}
-			{publicWalletAddressOfVisitor}
 		></FeedbackToVisitor>
 	{/if}
 </section>

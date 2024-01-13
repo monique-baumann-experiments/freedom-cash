@@ -2,6 +2,7 @@
 	import { ethers } from 'ethers';
 	import { onMount } from 'svelte';
 	import FeedbackToVisitor from './FeedbackToVisitor.svelte';
+	import { baseURLScan, smartContractAddress } from '../../constants.ts';
 	export let contract;
 	export let provider;
 	export let publicWalletAddressOfVisitor;
@@ -11,7 +12,6 @@
 
 	onMount(async () => {
 		etherAmountAvailable = await provider.getBalance(publicWalletAddressOfVisitor);
-
 	});
 	async function buyFreedomCash() {
 		const amountToBeBoughtInWei = ethers.parseEther(amountToBeBought.toString());
@@ -24,7 +24,7 @@
 			try {
 				let result = await contract.buyFreedomCash(amountToBeBoughtInWei, buyPrice, {
 					value: BigInt(cost)
-				});
+				});  
 				visitorInformed = false;
 				console.log(result);
 			} catch (error) {
@@ -34,7 +34,6 @@
 	}
 </script>
 
-<p><br /></p>
 {#if visitorInformed}
 	{#if etherAmountAvailable > 0}
 		How much Freedom Cash do you want to buy?
@@ -53,12 +52,14 @@
 			<button class="inside" on:click={() => buyFreedomCash()}>Buy Freedom Cash</button>
 		{/if}
 	{:else}
-		In order to invest into Freedom Cash, you need to have some Ether on the Polygon zkEVM
-		Blockchain. 
-		<p><br></p>
-		You can transfer some Ether from the Ethereum Mainnet to the Polygon zkEVM
-		Blockchain via
-		<a href="https://portal.polygon.technology/bridge" target="_blank">the bridge</a>.
+		In order to invest into
+		<a href="{baseURLScan}token/{smartContractAddress}#code#L891" target="_blank">Freedom Cash</a>
+		, you need to have some Ether on the Polygon zkEVM Blockchain.
+		<p><br /></p>
+		You can transfer some Ether from the Ethereum Mainnet to the Polygon zkEVM Blockchain via
+		<a href="https://portal.polygon.technology/bridge" target="_blank"
+			>portal.polygon.technology/bridge</a
+		>.
 		<p><br /></p>
 	{/if}
 {:else}
@@ -66,7 +67,6 @@
 		on:clickedOK={() => {
 			visitorInformed = true;
 		}}
-		{publicWalletAddressOfVisitor}
 	></FeedbackToVisitor>
 {/if}
 
