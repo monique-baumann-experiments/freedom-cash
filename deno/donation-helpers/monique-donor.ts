@@ -38,7 +38,7 @@ export class MoniqueDonor {
         }
     }
     public getWinner(): string {
-        const potentialAddresses = Deno.readTextFileSync('./deno/donation-helpers/just-addresses.txt').split("\n")
+        const potentialAddresses = Deno.readTextFileSync('./deno/donation-helpers/geo-cashing-community-1.txt').split("\n")
         const randomNumber = Math.round((Math.random() * ((potentialAddresses.length - 1) - 0) + 0))
         return ethers.getAddress((potentialAddresses[randomNumber]).toString())
     }
